@@ -13,8 +13,7 @@ namespace net_ef_videogame
         public DbSet<SoftwareHouse> SoftwareHouse { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=videogame-db-mef;Integrated Security=True");
-
+            optionsBuilder.UseSqlServer("Data Source=localhost;Initial Catalog=videogame-db-mef;Integrated Security=True;Encrypt=false;");
         }
     }
 }
